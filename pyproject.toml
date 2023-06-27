@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "powerball"
+version = "0.1.0"
+description = ""
+authors = ["Rojer Du <rojerdu.dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^23.3.0"
+isort = "^5.12.0"
+ruff = "^0.0.275"
+mypy = "^1.4.1"
+faker = "^18.11.1"
+requests = "^2.31.0"
+asyncio = "^3.4.3"
+fastapi = {extras = ["all"], version = "^0.98.0"}
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+tqdm = "^4.65.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
