@@ -28,3 +28,35 @@ This project demonstrates streaming Powerball data from a FastAPI server and sto
 #API Endpoint 
 #GET /drawing/{rows}
 This endpoint streams mock Powerball data rows in real-time. 
+* 'rows': the number of rows to stream
+
+Example usage: 
+`GET http://localhost:8000/drawing/10`
+
+The response will be a streaming response containing the requested number of Powerball data rows. 
+
+# Database Schema
+The SQLite database `powerball_data.db` contains a single table: 
+
+**powerball_results** 
+| Column           | Type    | Description                    |
+|------------------|---------|--------------------------------|
+| transaction_id   | TEXT    | Unique transaction identifier  |
+| first_name       | TEXT    | First name of the customer     |
+| last_name        | TEXT    | Last name of the customer      |
+| city             | TEXT    | City of the customer           |
+| state            | TEXT    | State of the customer          |
+| customer_id      | TEXT    | Unique customer identifier     |
+| powerball_1      | INTEGER | Powerball number 1             |
+| powerball_2      | INTEGER | Powerball number 2             |
+| powerball_3      | INTEGER | Powerball number 3             |
+| powerball_4      | INTEGER | Powerball number 4             |
+| powerball_5      | INTEGER | Powerball number 5             |
+| powerball_number | INTEGER | Powerball number               |
+
+# Acknowledgments 
+* [FastAPI](https://fastapi.tiangolo.com/) - FastAPI framekworking for building APIs with Python
+* [SQLite](https://www.sqlite.org/index.html) - Embedded relational database management system
+* [Faker](https://faker.readthedocs.io/en/master/v) - Library for generating relaistc fake data
+* [tqdm](https://tqdm.github.io/) - Fast, extensible progress bar for Python
+* [requests](https://requests.readthedocs.io/en/latest/) - Library for making HTTP requests
